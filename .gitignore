@@ -1,1 +1,6 @@
-embeddings/
+
+#  results/          # ignore entire folder                                                                                                                                                                
+#  *.json            # ignore all json files
+  embeddings/       # ignore embeddings folder                                                                                                                                                            
+  __pycache__/      # ignore python cache                                                                                                                                                                 
+  .env
