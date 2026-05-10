@@ -121,7 +121,7 @@ Label distribution: {'background': 7371, 'method': 3489, 'result': 1821,
 
 ---
 
-## Step 5 — Build the FAISS Index on Google Colab
+## Step 5 — Build the FAISS Index
 
 I build the FAISS index on Google Colab because loading the SPECTER encoder (440 MB) alongside FAISS exhausts memory on a local machine.
 
@@ -177,8 +177,8 @@ results/few_shot/predictions_acl_arc.json
 
 The RAG pipeline runs in `notebooks/rag_colab.ipynb`. It covers two tracks:
 
-- **Classification** (Steps 13–17): classifies the same test sentences using dynamically retrieved training examples from the FAISS index
-- **QA** (Steps 6–12): answers 10 hand-crafted research questions by retrieving relevant passages from the full corpus and generating grounded answers
+- **Classification**: classifies the same test sentences using dynamically retrieved training examples from the FAISS index
+- **QA**: answers 10 hand-crafted research questions by retrieving relevant passages from the full corpus and generating grounded answers
 
 Results download automatically at the end of each track.
 
@@ -204,13 +204,13 @@ To run the RAG QA system on your own research questions, add entries to `eval/qa
 | `expected_labels` | Intent labels the retriever should surface |
 | `reference_answer` | What a correct answer looks like, for manual review |
 
-After editing, upload the updated `qa_pairs.json` to Colab and re-run Steps 6–12 in the notebook. For each question, the system retrieves the five most similar passages from the corpus, generates a grounded answer using only those passages, and scores it for faithfulness.
+After editing, upload the updated `qa_pairs.json` to Colab and re-run in the notebook. For each question, the system retrieves the five most similar passages from the corpus, generates a grounded answer using only those passages, and scores it for faithfulness.
 
 ---
 
 ## How to Compute Classification Results
 
-After running Steps 6 and 7, compute Macro-F1:
+Compute Macro-F1:
 
 ```bash
 python3 - <<'EOF'
@@ -231,4 +231,4 @@ for source, labels in [
 EOF
 ```
 
-RAG results print automatically inside the Colab notebook at Step 17 (classification) and Step 8 (QA).
+RAG results print automatically inside the Colab notebook. 
