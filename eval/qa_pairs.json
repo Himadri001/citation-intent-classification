@@ -1,0 +1,72 @@
+[
+  {
+    "id": "q001",
+    "question": "Find citations where a method or tool from a prior paper was directly used.",
+    "expected_labels": ["method"],
+    "reference_answer": "Method citations include sentences like 'We use the approach of...' or 'Following [X], we apply...' where the citing paper adopts a technique from the cited work.",
+    "known_relevant_ids": []
+  },
+  {
+    "id": "q002",
+    "question": "Which citations provide background context or motivate the need for a new approach?",
+    "expected_labels": ["background", "motivation"],
+    "reference_answer": "Background citations establish context, such as 'This problem was first studied by...' or 'Prior work has shown that...' without the citing paper directly using the cited method.",
+    "known_relevant_ids": []
+  },
+  {
+    "id": "q003",
+    "question": "Find citations where the results of a prior paper are compared or contrasted with new results.",
+    "expected_labels": ["result"],
+    "reference_answer": "Result-comparison citations include phrases like 'Our model outperforms [X] by...', 'We achieve higher F1 than [X]...', or 'Unlike [X], our approach...'",
+    "known_relevant_ids": []
+  },
+  {
+    "id": "q004",
+    "question": "Which citations describe papers that extended or built upon prior foundational work?",
+    "expected_labels": ["extends"],
+    "reference_answer": "Extension citations say things like 'We extend the framework of [X]...' or 'Building on [X], we propose...' indicating a direct incremental contribution.",
+    "known_relevant_ids": []
+  },
+  {
+    "id": "q005",
+    "question": "Find citations that suggest future research directions or open problems.",
+    "expected_labels": ["future"],
+    "reference_answer": "Future citations include sentences like 'We leave exploration of [X]'s approach to future work' or 'An interesting direction would be to apply [X]...'",
+    "known_relevant_ids": []
+  },
+  {
+    "id": "q006",
+    "question": "Which citation sentences use BERT or transformer-based models as a method?",
+    "expected_labels": ["method"],
+    "reference_answer": "These are method citations where the citing paper adopts BERT or a transformer variant, e.g. 'We fine-tune BERT [X] on our dataset...'",
+    "known_relevant_ids": []
+  },
+  {
+    "id": "q007",
+    "question": "What citations discuss neural machine translation or sequence-to-sequence models?",
+    "expected_labels": ["background", "method", "result"],
+    "reference_answer": "Citations mentioning NMT or seq2seq could span background (introducing the concept), method (using an NMT framework), or result (comparing BLEU scores).",
+    "known_relevant_ids": []
+  },
+  {
+    "id": "q008",
+    "question": "Find citations where a dataset from a prior paper is used in experiments.",
+    "expected_labels": ["method"],
+    "reference_answer": "Dataset-use citations are a subtype of method citations, e.g. 'We evaluate on the dataset introduced by [X]...' or 'Following [X], we use...'",
+    "known_relevant_ids": []
+  },
+  {
+    "id": "q009",
+    "question": "Which citations compare accuracy or F1 scores against a baseline from another paper?",
+    "expected_labels": ["result"],
+    "reference_answer": "These are result-comparison citations containing numeric comparisons like 'achieves 92.3% accuracy, compared to [X]'s 89.1%...'",
+    "known_relevant_ids": []
+  },
+  {
+    "id": "q010",
+    "question": "Find citations where the motivation for a new approach is grounded in a limitation of prior work.",
+    "expected_labels": ["motivation", "background"],
+    "reference_answer": "Motivation citations identify gaps, e.g. 'While [X] addresses A, it fails to handle B, which we tackle in this paper.'",
+    "known_relevant_ids": []
+  }
+]

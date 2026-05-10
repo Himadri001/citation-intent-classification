@@ -1,0 +1,550 @@
+{
+  "rag_results": [
+    {
+      "id": "q001",
+      "question": "Find citations where a method or tool from a prior paper was directly used.",
+      "expected_labels": [
+        "method"
+      ],
+      "reference_answer": "Method citations include sentences like 'We use the approach of...' where the citing paper adopts a technique from the cited work.",
+      "retrieved": [
+        {
+          "text": "Next, backward and forward searches were performed for each relevant article, according to the guidelines provided by Levy and Ellis (2006) and Webster and Watson (2002). Backward searches included the sub-steps of backward references search, for example the work of Eng (2006) cited in Tomislav et al. (2014) and Chan and Chong (2013), backward authors search (e.",
+          "label": "method",
+          "id": "scicite_train_7351",
+          "score": 0.8832054138183594
+        },
+        {
+          "text": "This study was conducted and reported using the following checklists: AMSTAR (Assessment of Multiple Systematic Reviews) [15] and PRISMA Statement (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) [16] (S1 Appendix).",
+          "label": "method",
+          "id": "scicite_train_2576",
+          "score": 0.866542637348175
+        },
+        {
+          "text": "Salton\u2019s cosine was used for normalization in both the cited and the citing directions (Salton & McGill, 1983; Ahlgren et al., 2003).",
+          "label": "method",
+          "id": "scicite_train_6297",
+          "score": 0.8664495944976807
+        },
+        {
+          "text": "Non-systematic reviews \u201cReview\u201d Methods Although there is no single database reliably showing the true number of SRs or RCTs [6], we used PubMed as the basis of our search.",
+          "label": "method",
+          "id": "scicite_train_2739",
+          "score": 0.8635830879211426
+        },
+        {
+          "text": "The title pages were, with slight modifications, the same as those used in the previous study by Svenonius and Molto (1990).",
+          "label": "method",
+          "id": "scicite_train_5233",
+          "score": 0.8573113679885864
+        }
+      ],
+      "answer": "Passage [3] describes using Salton's cosine for normalization [3]. Passage [5] describes using title pages with slight modifications from a previous study [5]."
+    },
+    {
+      "id": "q002",
+      "question": "Which citations provide background context or motivate the need for a new approach?",
+      "expected_labels": [
+        "background",
+        "motivation"
+      ],
+      "reference_answer": "Background citations establish context such as 'This problem was first studied by...' without the citing paper directly using the cited method.",
+      "retrieved": [
+        {
+          "text": "This approach has now gained wide usage , as exemplified by the work of Collins ( 1996 , 1999 ) , Charniak ( 1996 , 1997 ) , Johnson ( 1998 ) , Chiang ( 2000 ) , and many others .",
+          "label": "motivation",
+          "id": "acl_arc_train_12282",
+          "score": 0.8871179819107056
+        },
+        {
+          "text": "The changes made were inspired by those described in Stetina and Nagao ( 1997 , page 75 ) .",
+          "label": "motivation",
+          "id": "acl_arc_train_12117",
+          "score": 0.8602076768875122
+        },
+        {
+          "text": "gov/pubmed/) and both the total number of publications and the growth rate of the number of publications are increasing exponentially [18, 19].",
+          "label": "background",
+          "id": "scicite_train_1531",
+          "score": 0.9126451015472412
+        },
+        {
+          "text": "Finally, 82 articles [9\u2013 18,32\u2013103] were selected in the meta-analysis, of which 9 articles [14,34,37,42,61,64,71,84,88] had two independent studies and were considered separately.",
+          "label": "method",
+          "id": "scicite_test_9262",
+          "score": 0.9078518748283386
+        },
+        {
+          "text": "The review protocol describes all steps performed during the review, reduces risk of bias, and increases its rigor, transparency, and repeatability [17].",
+          "label": "background",
+          "id": "scicite_train_6835",
+          "score": 0.9028218984603882
+        }
+      ],
+      "answer": "Passages [1] and [2] provide motivation for an approach, while passages [3] and [5] provide background context."
+    },
+    {
+      "id": "q003",
+      "question": "Find citations where the results of a prior paper are compared or contrasted with new results.",
+      "expected_labels": [
+        "result"
+      ],
+      "reference_answer": "Result-comparison citations include phrases like 'Our model outperforms [X] by...' or 'We achieve higher F1 than [X]...'",
+      "retrieved": [
+        {
+          "text": "The table also presents the closest comparable experimental results reported by McKnight and Srinivasan ( 2003 ) .1 McKnight and Srinivasan ( henceforth , M&S ) created a test collection consisting of 37,151 RCTs from approximately 12 million MEDLINE abstracts dated between 1976 and 2001 .",
+          "label": "result",
+          "id": "acl_arc_train_12415",
+          "score": 0.8767173290252686
+        },
+        {
+          "text": "In a European context, our results are perfectly comparable to those obtained in Ireland [25] or the UK [29].",
+          "label": "result",
+          "id": "scicite_test_10539",
+          "score": 0.8674499988555908
+        },
+        {
+          "text": "4%, an enormous improvement compared to the Lumbini survey 1995 result that reported just 15% [20, 24, 38].",
+          "label": "result",
+          "id": "scicite_train_4959",
+          "score": 0.8657432794570923
+        },
+        {
+          "text": "2 of reference (17) obtaining results for the effect of treatments, qualitatively similar to those explicitly reported here.",
+          "label": "result",
+          "id": "scicite_train_4830",
+          "score": 0.8638485074043274
+        },
+        {
+          "text": "[17] presented a number of reasons that might account for the disparities between these two studies.",
+          "label": "result",
+          "id": "scicite_train_7237",
+          "score": 0.863598108291626
+        }
+      ],
+      "answer": "Passages [3] and [5] describe citations where results are compared or contrasted with new results. Passage [3] mentions an \"enormous improvement compared to the Lumbini survey 1995 result,\" and passage [5] refers to \"disparities between these two studies.\""
+    },
+    {
+      "id": "q004",
+      "question": "Which citations describe papers that extended or built upon prior foundational work?",
+      "expected_labels": [
+        "extends"
+      ],
+      "reference_answer": "Extension citations say things like 'We extend the framework of [X]...' indicating a direct incremental contribution.",
+      "retrieved": [
+        {
+          "text": "A companion paper describes the evaluation process and results in further detail ( Chu-Carroll and Nickerson , 2000 ) .",
+          "label": "extends",
+          "id": "acl_arc_train_12445",
+          "score": 0.7940741777420044
+        },
+        {
+          "text": "\u00e2\u0088\u0097 A brief version of this work , with some additional material , first appeared as ( Eisner , 2001a ) .",
+          "label": "extends",
+          "id": "acl_arc_train_12376",
+          "score": 0.7850152850151062
+        },
+        {
+          "text": "This section , which elaborates on preliminary results reported in Demner-Fushman and Lin ( 2005 ) , describes extraction algorithms for population , problems , interventions , outcomes , and the strength of evidence .",
+          "label": "extends",
+          "id": "acl_arc_validation_12713",
+          "score": 0.778557300567627
+        },
+        {
+          "text": "gov/pubmed/) and both the total number of publications and the growth rate of the number of publications are increasing exponentially [18, 19].",
+          "label": "background",
+          "id": "scicite_train_1531",
+          "score": 0.8543341159820557
+        },
+        {
+          "text": "Only a small proportion of relevant trials are incorporated into systematic reviews [6].",
+          "label": "background",
+          "id": "scicite_train_7141",
+          "score": 0.8494755625724792
+        }
+      ],
+      "answer": "Passages [1], [2], and [3] describe papers that extended prior work."
+    },
+    {
+      "id": "q005",
+      "question": "Find citations that suggest future research directions or open problems.",
+      "expected_labels": [
+        "future"
+      ],
+      "reference_answer": "Future citations include sentences like 'We leave exploration of [X] to future work'.",
+      "retrieved": [
+        {
+          "text": "Alternatively , we may think of user-centered comparative studies ( Hersh et al. , 1995 ) .",
+          "label": "future",
+          "id": "acl_arc_train_12306",
+          "score": 0.8510611057281494
+        },
+        {
+          "text": "gov/pubmed/) and both the total number of publications and the growth rate of the number of publications are increasing exponentially [18, 19].",
+          "label": "background",
+          "id": "scicite_train_1531",
+          "score": 0.9227713346481323
+        },
+        {
+          "text": "Only a small proportion of relevant trials are incorporated into systematic reviews [6].",
+          "label": "background",
+          "id": "scicite_train_7141",
+          "score": 0.8944979906082153
+        },
+        {
+          "text": "This study was conducted and reported using the following checklists: AMSTAR (Assessment of Multiple Systematic Reviews) [15] and PRISMA Statement (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) [16] (S1 Appendix).",
+          "label": "method",
+          "id": "scicite_train_2576",
+          "score": 0.8927305340766907
+        },
+        {
+          "text": "Finally, 82 articles [9\u2013 18,32\u2013103] were selected in the meta-analysis, of which 9 articles [14,34,37,42,61,64,71,84,88] had two independent studies and were considered separately.",
+          "label": "method",
+          "id": "scicite_test_9262",
+          "score": 0.891666054725647
+        }
+      ],
+      "answer": "Passage [1] suggests a future research direction: \"user-centered comparative studies\"."
+    },
+    {
+      "id": "q006",
+      "question": "Which citation sentences use transformer-based models as a method?",
+      "expected_labels": [
+        "method"
+      ],
+      "reference_answer": "These are method citations where the citing paper adopts a transformer variant, e.g. 'We fine-tune BERT on our dataset...'",
+      "retrieved": [
+        {
+          "text": "Salton\u2019s cosine was used for normalization in both the cited and the citing directions (Salton & McGill, 1983; Ahlgren et al., 2003).",
+          "label": "method",
+          "id": "scicite_train_6297",
+          "score": 0.8108621835708618
+        },
+        {
+          "text": "Following Hockenmaier , Bierner , and Baldridge ( 2002 ) , Xia ( 1999 ) , and Miyao , Ninomiya , and Tsujii ( 2004 ) , we extract a reference lexicon from Sections 02 -- 21 of the WSJ .",
+          "label": "method",
+          "id": "acl_arc_train_12360",
+          "score": 0.7990320920944214
+        },
+        {
+          "text": "Corpus frequency : ( Vosse , 1992 ) differentiates between misspellings and neologisms ( new words ) in terms of their frequency .",
+          "label": "method",
+          "id": "acl_arc_train_12492",
+          "score": 0.796282947063446
+        },
+        {
+          "text": "Next, backward and forward searches were performed for each relevant article, according to the guidelines provided by Levy and Ellis (2006) and Webster and Watson (2002). Backward searches included the sub-steps of backward references search, for example the work of Eng (2006) cited in Tomislav et al. (2014) and Chan and Chong (2013), backward authors search (e.",
+          "label": "method",
+          "id": "scicite_train_7351",
+          "score": 0.7921344637870789
+        },
+        {
+          "text": "However , rather than output this wrong translation directly , we use a post hoc validation and ( if required ) correction process based on Grefenstette ( 1999 ) .",
+          "label": "method",
+          "id": "acl_arc_train_12145",
+          "score": 0.7856303453445435
+        }
+      ],
+      "answer": "I am sorry, but none of the provided passages mention transformer-based models."
+    },
+    {
+      "id": "q007",
+      "question": "Find citations where a dataset from a prior paper is used in experiments.",
+      "expected_labels": [
+        "method"
+      ],
+      "reference_answer": "Dataset-use citations are a subtype of method citations, e.g. 'We evaluate on the dataset introduced by [X]...'",
+      "retrieved": [
+        {
+          "text": "For all datasets except LabelMeFacade [31] and RueMonge2014 [14] datasets, we report five fold cross-validation results, the standard protocol used in the literature.",
+          "label": "method",
+          "id": "scicite_train_4847",
+          "score": 0.865303635597229
+        },
+        {
+          "text": "Besides the most popular datasets (see [3, 19, 20]), we also considered some larger datasets (e.",
+          "label": "method",
+          "id": "scicite_test_9777",
+          "score": 0.8595203161239624
+        },
+        {
+          "text": "For statistical significance , we use McNemar 's test on non-gold LAS , as implemented by Nilsson and Nivre ( 2008 ) .",
+          "label": "method",
+          "id": "acl_arc_train_11453",
+          "score": 0.8572095632553101
+        },
+        {
+          "text": "These include the HGMD (Stenson et al. 2009), the NHGRI Catalog of Published GWAS (Hindorff et al. 2001) and the OMIM (Amberger et al. 2009).",
+          "label": "method",
+          "id": "scicite_train_904",
+          "score": 0.8545390367507935
+        },
+        {
+          "text": "The data sets we use are publicly available from two widely used knowledge graphs, WordNet [37] and Freebase [3].",
+          "label": "method",
+          "id": "scicite_train_2908",
+          "score": 0.8539830446243286
+        }
+      ],
+      "answer": "Passage [5] mentions using datasets publicly available from WordNet [37] and Freebase [3]."
+    },
+    {
+      "id": "q008",
+      "question": "Which citations compare accuracy or F1 scores against a baseline from another paper?",
+      "expected_labels": [
+        "result"
+      ],
+      "reference_answer": "These contain numeric comparisons like 'achieves 92.3% accuracy, compared to [X]s 89.1%...'",
+      "retrieved": [
+        {
+          "text": "The table also presents the closest comparable experimental results reported by McKnight and Srinivasan ( 2003 ) .1 McKnight and Srinivasan ( henceforth , M&S ) created a test collection consisting of 37,151 RCTs from approximately 12 million MEDLINE abstracts dated between 1976 and 2001 .",
+          "label": "result",
+          "id": "acl_arc_train_12415",
+          "score": 0.8381848335266113
+        },
+        {
+          "text": "We optimize using RMSProp [11] and Adam [12] gradient descent solvers, which both obtain relatively similar results.",
+          "label": "result",
+          "id": "scicite_train_6890",
+          "score": 0.8262770175933838
+        },
+        {
+          "text": "On small data sets all of the Bayesian estimators strongly outperform EM ( and , to a lesser extent , VB ) with respect to all of our evaluation measures , confirming the results reported in Goldwater and Griffiths ( 2007 ) .",
+          "label": "result",
+          "id": "acl_arc_train_12632",
+          "score": 0.8246545195579529
+        },
+        {
+          "text": "Although evaluated on different data sets , this result is consistent with results from previous work ( Gatt and Belz , 2008 ; Gatt et al. , 2009 ) .",
+          "label": "result",
+          "id": "acl_arc_train_11948",
+          "score": 0.8233333230018616
+        },
+        {
+          "text": "Some researchers , however , including Goldberg and Elhadad ( 2010 ) , train on predicted feature values instead .",
+          "label": "result",
+          "id": "acl_arc_train_12218",
+          "score": 0.8224409818649292
+        }
+      ],
+      "answer": "Passage [3] mentions that Bayesian estimators outperform EM (and, to a lesser extent, VB) with respect to evaluation measures, confirming results reported in Goldwater and Griffiths (2007). However, the specific evaluation measures are not mentioned."
+    },
+    {
+      "id": "q009",
+      "question": "Find citations where the motivation for a new approach is grounded in a limitation of prior work.",
+      "expected_labels": [
+        "motivation",
+        "background"
+      ],
+      "reference_answer": "Motivation citations identify gaps, e.g. 'While [X] addresses A, it fails to handle B, which we tackle in this paper.'",
+      "retrieved": [
+        {
+          "text": "This approach has now gained wide usage , as exemplified by the work of Collins ( 1996 , 1999 ) , Charniak ( 1996 , 1997 ) , Johnson ( 1998 ) , Chiang ( 2000 ) , and many others .",
+          "label": "motivation",
+          "id": "acl_arc_train_12282",
+          "score": 0.8576712012290955
+        },
+        {
+          "text": "The changes made were inspired by those described in Stetina and Nagao ( 1997 , page 75 ) .",
+          "label": "motivation",
+          "id": "acl_arc_train_12117",
+          "score": 0.8415095806121826
+        },
+        {
+          "text": "gov/pubmed/) and both the total number of publications and the growth rate of the number of publications are increasing exponentially [18, 19].",
+          "label": "background",
+          "id": "scicite_train_1531",
+          "score": 0.899520754814148
+        },
+        {
+          "text": "Next, backward and forward searches were performed for each relevant article, according to the guidelines provided by Levy and Ellis (2006) and Webster and Watson (2002). Backward searches included the sub-steps of backward references search, for example the work of Eng (2006) cited in Tomislav et al. (2014) and Chan and Chong (2013), backward authors search (e.",
+          "label": "method",
+          "id": "scicite_train_7351",
+          "score": 0.892345130443573
+        },
+        {
+          "text": "This study was conducted and reported using the following checklists: AMSTAR (Assessment of Multiple Systematic Reviews) [15] and PRISMA Statement (Preferred Reporting Items for Systematic Reviews and Meta-Analyses) [16] (S1 Appendix).",
+          "label": "method",
+          "id": "scicite_train_2576",
+          "score": 0.8799611926078796
+        }
+      ],
+      "answer": "I am sorry, but none of the provided passages describe a motivation for a new approach that is grounded in a limitation of prior work."
+    },
+    {
+      "id": "q010",
+      "question": "What citation sentences discuss neural machine translation or sequence-to-sequence models?",
+      "expected_labels": [
+        "background",
+        "method",
+        "result"
+      ],
+      "reference_answer": "Citations mentioning NMT or seq2seq span background (introducing the concept), method (using an NMT framework), or result (comparing BLEU scores).",
+      "retrieved": [
+        {
+          "text": "Further, we establish that our models have fewer parameters (almost as few as a native network) and so are easier to train than methods like [23].",
+          "label": "method",
+          "id": "scicite_validation_9044",
+          "score": 0.8831260204315186
+        },
+        {
+          "text": "Almost all of the commonly used neural simulation packages now have a Python interface (Eppler et al., 2008; Goodman and Brette, 2009; Hines et al., 2009; Cornelis et al., 2012).",
+          "label": "method",
+          "id": "scicite_train_4501",
+          "score": 0.879456639289856
+        },
+        {
+          "text": "It has also produced promising results in language translation [57], reconstructing brain circuits [58], question answering [59], and natural language understanding [60].",
+          "label": "background",
+          "id": "scicite_train_2562",
+          "score": 0.8756610751152039
+        },
+        {
+          "text": ", 2015), or implicitly modeled by recent neural models(Du et al., 2017; Zhou et al., 2017b; Yuan et al., 2017; Song et al., 2017; Subramanian et al., 2017).",
+          "label": "background",
+          "id": "scicite_validation_8733",
+          "score": 0.8728744387626648
+        },
+        {
+          "text": "LSTMs are able to capture past signal behavior and they have shown success in many audio processing applications, such as speech recognition and computational paralinguistics [6, 16].",
+          "label": "method",
+          "id": "scicite_train_4067",
+          "score": 0.8719181418418884
+        }
+      ],
+      "answer": "Passage [3] mentions that neural networks have produced promising results in language translation. However, the passages do not explicitly mention neural machine translation or sequence-to-sequence models."
+    }
+  ],
+  "retrieval_scores": [
+    {
+      "id": "q001",
+      "question": "Find citations where a method or tool from a prior paper was...",
+      "expected_labels": "method",
+      "retrieved_labels": "method, method, method, method, method",
+      "label_precision@k": 1.0
+    },
+    {
+      "id": "q002",
+      "question": "Which citations provide background context or motivate the n...",
+      "expected_labels": "background, motivation",
+      "retrieved_labels": "motivation, motivation, background, method, background",
+      "label_precision@k": 0.8
+    },
+    {
+      "id": "q003",
+      "question": "Find citations where the results of a prior paper are compar...",
+      "expected_labels": "result",
+      "retrieved_labels": "result, result, result, result, result",
+      "label_precision@k": 1.0
+    },
+    {
+      "id": "q004",
+      "question": "Which citations describe papers that extended or built upon ...",
+      "expected_labels": "extends",
+      "retrieved_labels": "extends, extends, extends, background, background",
+      "label_precision@k": 0.6
+    },
+    {
+      "id": "q005",
+      "question": "Find citations that suggest future research directions or op...",
+      "expected_labels": "future",
+      "retrieved_labels": "future, background, background, method, method",
+      "label_precision@k": 0.2
+    },
+    {
+      "id": "q006",
+      "question": "Which citation sentences use transformer-based models as a m...",
+      "expected_labels": "method",
+      "retrieved_labels": "method, method, method, method, method",
+      "label_precision@k": 1.0
+    },
+    {
+      "id": "q007",
+      "question": "Find citations where a dataset from a prior paper is used in...",
+      "expected_labels": "method",
+      "retrieved_labels": "method, method, method, method, method",
+      "label_precision@k": 1.0
+    },
+    {
+      "id": "q008",
+      "question": "Which citations compare accuracy or F1 scores against a base...",
+      "expected_labels": "result",
+      "retrieved_labels": "result, result, result, result, result",
+      "label_precision@k": 1.0
+    },
+    {
+      "id": "q009",
+      "question": "Find citations where the motivation for a new approach is gr...",
+      "expected_labels": "motivation, background",
+      "retrieved_labels": "motivation, motivation, background, method, method",
+      "label_precision@k": 0.6
+    },
+    {
+      "id": "q010",
+      "question": "What citation sentences discuss neural machine translation o...",
+      "expected_labels": "background, method, result",
+      "retrieved_labels": "method, method, background, background, method",
+      "label_precision@k": 1.0
+    }
+  ],
+  "faithfulness_scores": [
+    {
+      "id": "q001",
+      "score": 5,
+      "raw": "Score: 5. Reason:Both claims are directly supported by the provided passages."
+    },
+    {
+      "id": "q002",
+      "score": 1,
+      "raw": "Score: 1. Reason:The answer makes a claim about the content of passages [1], [2], [3], and [5] that is not supported by the passages themselves."
+    },
+    {
+      "id": "q003",
+      "score": 5,
+      "raw": "Score: 5. Reason:The answer accurately summarizes the content of passages [3] and [5] regarding the comparison and contrasting of results with new findings."
+    },
+    {
+      "id": "q004",
+      "score": 5,
+      "raw": "Score: 5. Reason:The answer accurately summarizes the content of passages [1], [2], and [3], which all mention extending or elaborating on previous research."
+    },
+    {
+      "id": "q005",
+      "score": 1,
+      "raw": "Score: 1. Reason:The answer misinterprets passage [1] as a suggestion for future research, when it is simply mentioning a type of study."
+    },
+    {
+      "id": "q006",
+      "score": 5,
+      "raw": "Score: 5. Reason:The answer correctly states that the passages do not mention transformer-based models."
+    },
+    {
+      "id": "q007",
+      "score": 5,
+      "raw": "Score: 5. Reason:The answer is fully supported by passage [5], which explicitly states that the datasets used are publicly available from WordNet [37] and Freebase [3]."
+    },
+    {
+      "id": "q008",
+      "score": 5,
+      "raw": "Score: 5. Reason:The answer accurately reflects the information presented in passage [3] regarding the performance of Bayesian estimators compared to EM and VB, and correctly notes the lack of specific evaluation measures mentioned."
+    },
+    {
+      "id": "q009",
+      "score": 1,
+      "raw": "Score: 1. Reason:The answer states that none of the passages describe a motivation for a new approach, which is not something that can be verified from the provided passages."
+    },
+    {
+      "id": "q010",
+      "score": 5,
+      "raw": "Score: 5. Reason:The answer accurately states that passage [3] mentions neural networks' success in language translation and correctly notes the absence of explicit mentions of neural machine translation or sequence-to-sequence models in the provided passages."
+    }
+  ],
+  "summary": {
+    "mean_label_precision_at_k": 0.82,
+    "mean_faithfulness": 3.8,
+    "k": 5,
+    "model": "google/gemini-2.0-flash-001",
+    "encoder": "allenai-specter",
+    "corpus_size": 12910
+  }
+}
